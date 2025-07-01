@@ -1,0 +1,10 @@
+/* resources/css/app.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Kelas kustom baru untuk status aktif kartu kategori --- */
+.category-card-active {
+    @apply bg-blue-50 border-blue-500 shadow-lg;
+}
