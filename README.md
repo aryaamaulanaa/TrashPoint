@@ -24,7 +24,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek ini d
 
 1.  **Kloning Repositori:**
     ```bash
-    git clone [URL_REPOSitori_GITHUB_MU]
+    git clone https://github.com/aryaamaulanaa/TrashPoint.git
     cd [nama_folder_proyekmu]
     ```
 
