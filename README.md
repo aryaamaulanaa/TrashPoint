@@ -7,7 +7,7 @@
 * Sistem Poin Pengguna
 * Penukaran Hadiah dengan Poin
 * Manajemen Pengguna (Admin & User)
-* [Tambahkan fitur-fitur lain yang relevan]
+* dan masih banyak lagi
 
 ## Persyaratan Sistem
 
