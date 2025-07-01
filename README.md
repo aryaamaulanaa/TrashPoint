@@ -1,6 +1,4 @@
-# Laravel Trashpoint - [Nama Proyekmu]
-
-[Deskripsi singkat proyek Trashpoint-mu: Apa itu, apa yang dilakukannya, dan tujuannya.]
+# Laravel Trashpoint -
 
 ## Fitur Utama
 
