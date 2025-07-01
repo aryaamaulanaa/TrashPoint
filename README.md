@@ -1,66 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Trashpoint - [Nama Proyekmu]
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[Deskripsi singkat proyek Trashpoint-mu: Apa itu, apa yang dilakukannya, dan tujuannya.]
 
-## About Laravel
+## Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* Pengelolaan Jenis Sampah (harga/poin)
+* Pencatatan Penyetoran Sampah oleh Pengguna
+* Sistem Poin Pengguna
+* Penukaran Hadiah dengan Poin
+* Manajemen Pengguna (Admin & User)
+* [Tambahkan fitur-fitur lain yang relevan]
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Persyaratan Sistem
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Pastikan Anda memiliki hal-hal berikut terinstal di sistem Anda:
 
-## Learning Laravel
+* PHP >= 8.1
+* Composer
+* Node.js & npm (atau Yarn)
+* MySQL / PostgreSQL / SQLite (database pilihanmu)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instalasi Proyek
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek ini di mesin lokal Anda:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1.  **Kloning Repositori:**
+    ```bash
+    git clone [URL_REPOSitori_GITHUB_MU]
+    cd [nama_folder_proyekmu]
+    ```
 
-## Laravel Sponsors
+2.  **Instal Dependensi Composer:**
+    ```bash
+    composer install
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+3.  **Salin File Environment:**
+    ```bash
+    cp .env.example .env
+    ```
 
-### Premium Partners
+4.  **Konfigurasi Environment (.env):**
+    Buka file `.env` dan sesuaikan pengaturan database Anda:
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=[nama_database_anda]
+    DB_USERNAME=[username_database_anda]
+    DB_PASSWORD=[password_database_anda]
+    ```
+    Juga, pastikan `APP_URL` sudah benar jika Anda menggunakannya di lingkungan lokal:
+    ```
+    APP_URL=http://localhost:8000 (atau URL lokal Anda)
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+5.  **Generate Application Key:**
+    ```bash
+    php artisan key:generate
+    ```
 
-## Contributing
+6.  **Jalankan Migrasi Database:**
+    Ini akan membuat tabel-tabel yang diperlukan di database Anda.
+    ```bash
+    php artisan migrate
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+7.  **Seed Data (Opsional tapi Disarankan):**
+    Jika Anda memiliki *seeder* untuk mengisi data awal (misal: admin user, jenis sampah awal, hadiah), jalankan ini:
+    ```bash
+    php artisan db:seed
+    ```
+    *(Jika Anda memiliki seeder tertentu, misal `UserSeeder`, bisa juga: `php artisan db:seed --class=UserSeeder`)*
 
-## Code of Conduct
+8.  **Instal Dependensi Node.js:**
+    ```bash
+    npm install
+    # atau jika menggunakan yarn:
+    # yarn
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+9.  **Compile Assets (CSS/JS):**
+    ```bash
+    npm run dev
+    # atau untuk produksi:
+    # npm run build
+    ```
 
-## Security Vulnerabilities
+10. **Jalankan Server Lokal Laravel:**
+    ```bash
+    php artisan serve
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+11. **Akses Aplikasi:**
+    Buka browser Anda dan kunjungi `http://localhost:8000` (atau URL yang ditampilkan oleh `php artisan serve`).
 
-## License
+## Kredensial Default (jika ada seeder)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Jika Anda menjalankan `php artisan db:seed`, Anda mungkin memiliki kredensial login default, contoh:
+* **Email Admin:** `admin@example.com`
+* **Password Admin:** `password`
+* **Email Pengguna Biasa:** `user@example.com`
+* **Password Pengguna Biasa:** `password`
+
+## Pengujian
+
+* [Jelaskan cara melakukan pengujian dasar, misal: login sebagai admin, tambahkan jenis sampah baru, daftarkan user baru, dll.]
+
+## Kontribusi
+
+[Opsional: Jelaskan bagaimana orang lain bisa berkontribusi pada proyek ini]
+
+## Lisensi
+
+[Opsional: Lisensi yang Anda gunakan, misal: MIT License]
